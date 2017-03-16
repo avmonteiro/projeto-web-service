@@ -3,11 +3,11 @@
 require 'httparty'
 
 
-When(/^cliente faz request GET na url "([^"]*)"$/) do |arg1|
+Given(/^cliente faz request GET na url "([^"]*)"$/) do |arg1|
    @response = HTTParty.get(arg1)
 end
 
-Then(/^deverá aparecer os nomes dos filmes$/) do
+When(/^deverá aparecer os nomes dos filmes$/) do
   @response['results'].each {|filter|
 	puts "Nome do filme por titulo: #{filter['title']}"}
 end
