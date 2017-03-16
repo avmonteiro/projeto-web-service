@@ -1,4 +1,3 @@
-
 Feature: Obter o valor de count do GET da url e realizar um GET do novo valor de count
 
   Scenario: GET na url e armazenar valor do count e fazer um GET do novo valor do count
