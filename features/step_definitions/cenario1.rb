@@ -4,12 +4,12 @@ require 'httparty'
 
 
 Given(/^cliente faz request GET na url "([^"]*)"$/) do |arg1|
-   @response = HTTParty.get(arg1)
+  @response = HTTParty.get(arg1)
 end
 
 When(/^deverá aparecer os nomes dos filmes$/) do
   @response['results'].each {|filter|
-	puts "Nome do filme por titulo: #{filter['title']}"}
+  puts "Nome do filme por titulo: #{filter['title']}"}
 end
 
 Then(/^validar status code com "([^"]*)" e mensagem de retorno "([^"]*)"$/) do |arg1, arg2|
